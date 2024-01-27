@@ -8,7 +8,7 @@ export function Socials() {
 
     <div className='flex justify-center'>
       <div className="h-8 w-3/4 md:w-2/4 flex justify-around ">
-        <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
+        <img className='w-fi transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500  '
         src='/twitter.svg'
         width={500}
         height={500}
@@ -16,7 +16,7 @@ export function Socials() {
         onClick={() => handleClick('https://twitter.com/ashikkabeerr')}
       />
 
-        <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
+        <img className='w-fi transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500'
         src='/github.svg'
         width={500}
         height={500}
@@ -25,7 +25,7 @@ export function Socials() {
       />
       
 
-      <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
+      <img className='w-fi transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500'
         src='/linkedin.svg'
         width={500}
         height={500}
@@ -34,7 +34,7 @@ export function Socials() {
       />
 
    
-      <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
+      <img className='w-fi transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-500'
         src='/medium.svg'
         width={500}
         height={500}
