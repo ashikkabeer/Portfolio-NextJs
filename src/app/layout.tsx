@@ -4,7 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 import { NavbarDemo } from '@/components/Navbar';
-
+import Logo from '@/components/Logo';
 export const metadata: Metadata = {
   title: 'Ashik Kabeer',
   description: 'Backend Developer',
@@ -24,6 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* <Logo/> */}
           <NavbarDemo />
 
           {children}

@@ -1,5 +1,4 @@
 "use client"
-import Link from 'next/link'
 export function Socials() {
   const handleClick = (url:string) => {
     window.location.href = url

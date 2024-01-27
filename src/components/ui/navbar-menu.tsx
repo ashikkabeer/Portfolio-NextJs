@@ -1,11 +1,11 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const transition = {
-  type: "spring",
+  type: 'spring',
   mass: 0.5,
   damping: 11.5,
   stiffness: 100,
@@ -24,11 +24,19 @@ export const MenuItem = ({
   item: string;
   children?: React.ReactNode;
 }) => {
+  const handleClick = (url: string) => {
+    if(url=='home') url = '/'
+    window.location.href = url;
+  };
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div
+      onMouseEnter={() => setActive(item)}
+      className='relative'
+      onClick={() => handleClick(item.toLowerCase())}
+    >
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer hover:opacity-[0.9] text-white"
+        className='cursor-pointer hover:opacity-[0.9] text-white'
       >
         {item}
       </motion.p>
@@ -39,14 +47,14 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
+            <div className='absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2'>
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animat className="bg-white bg-black backdrop-blur-sm rounded-2xl overflow-h  border-black/[0.2] border-white/[0.2] shadow-xl"
+                layoutId='active' // layoutId ensures smooth animat className="bg-white bg-black backdrop-blur-sm rounded-2xl overflow-h  border-black/[0.2] border-white/[0.2] shadow-xl"
               >
                 <motion.div
                   layout // layout ensures smooth animation
-                  className="w-max h-full p-4"
+                  className='w-max h-full p-4'
                 >
                   {children}
                 </motion.div>
@@ -69,7 +77,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full boder border-transparent bg-transparent shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className='relative rounded-full boder border-transparent bg-transparent shadow-input flex justify-center space-x-4 px-8 py-6 '
     >
       {children}
     </nav>
@@ -88,19 +96,17 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
+    <Link href={href} className='flex space-x-2'>
       <Image
         src={src}
         width={140}
         height={70}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
+        className='flex-shrink-0 rounded-md shadow-2xl'
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-white">
-          {title}
-        </h4>
-        <p className="text-ne xt-sm max-w-[10rem] text-neutral-300">
+        <h4 className='text-xl font-bold mb-1 text-white'>{title}</h4>
+        <p className='text-ne xt-sm max-w-[10rem] text-neutral-300'>
           {description}
         </p>
       </div>
@@ -110,9 +116,7 @@ export const ProductItem = ({
 
 export const HoveredLink = ({ children, ...rest }: any) => {
   return (
-    <Link
-      {...rest} e="text-neutral-700 text-neutral-200 hover:text-black "
-    >
+    <Link {...rest} e='text-neutral-700 text-neutral-200 hover:text-black '>
       {children}
     </Link>
   );
