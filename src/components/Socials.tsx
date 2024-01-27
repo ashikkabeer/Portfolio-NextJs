@@ -1,36 +1,47 @@
-import Image from 'next/image';
-
+"use client"
+import Link from 'next/link'
 export function Socials() {
+  const handleClick = (url:string) => {
+    window.location.href = url
+  }
   return (
+
     <div className='flex justify-center'>
-      <div className="h-8 w-3/4 md:w-2/4 flex justify-around">
-      <Image
+      <div className="h-8 w-3/4 md:w-2/4 flex justify-around ">
+        <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
         src='/twitter.svg'
         width={500}
         height={500}
         alt='Picture of the author'
+        onClick={() => handleClick('https://twitter.com/ashikkabeerr')}
       />
 
-      <Image
+        <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
         src='/github.svg'
         width={500}
         height={500}
         alt='Picture of the author'
+        onClick={() => handleClick('https://www.github.com/ashikkabeer')}
       />
+      
 
-      <Image
+      <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
         src='/linkedin.svg'
         width={500}
         height={500}
         alt='Picture of the author'
+        onClick={() => handleClick('https://www.linkedin.com/in/ashik-kabeer')}
       />
 
-      <Image
+   
+      <img className='w-fit hover:bg-neutral-900 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300'
         src='/medium.svg'
         width={500}
         height={500}
         alt='Picture of the author'
+        onClick={() => handleClick('https://medium.com/@ashikkabeer')}
       />
+      
       </div>
     </div>
   );

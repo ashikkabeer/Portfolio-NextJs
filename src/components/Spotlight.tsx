@@ -22,7 +22,7 @@ export function SpotlightPreview() {
 
         </div>
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-         Build efficient backend systems
+         Building Efficient Backend Systems
         </p>
         <div className="mt-20">
         <Socials/>
