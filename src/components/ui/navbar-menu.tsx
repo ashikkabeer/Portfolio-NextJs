@@ -36,7 +36,7 @@ export const MenuItem = ({
     >
       <motion.p
         transition={{ duration: 0.3 }}
-        className='cursor-pointer hover:opacity-[0.9] text-white'
+        className='cursor-pointer hover:opacity-[0.9] select-none text-white'
       >
         {item}
       </motion.p>
